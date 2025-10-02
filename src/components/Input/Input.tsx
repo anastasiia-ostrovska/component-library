@@ -52,7 +52,11 @@ export const Input = ({
 					value={value}
 					onChange={(e) => onChange(e.target.value)}
 					className={clsx(
-						"w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary",
+						`
+						w-full rounded-md border px-3 py-2 
+						focus:outline-none focus:ring-2 focus:ring-primary 
+						[&::-webkit-inner-spin-button]:appearance-none 
+						[&::-webkit-outer-spin-button]:appearance-none`,
 						className
 					)}
 					{...props}
