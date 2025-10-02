@@ -5,7 +5,7 @@ import type { InputProps } from "@/types";
 import { ClearInputIconButton, ShowPasswordIconButton } from "./IconButtons";
 import clsx from "clsx";
 
-const states = {
+const validationStates = {
 	standard: "text-text-secondary",
 	error: "text-error",
 	success: "text-success",
@@ -18,7 +18,7 @@ export const Input = ({
 	label = "",
 	helperText = "",
 	type = "text",
-	state = "standard",
+	validationState = "standard",
 	clearable = false,
 	className,
 	...props
@@ -73,7 +73,9 @@ export const Input = ({
 			</div>
 			{/*	Helper text with states*/}
 			{helperText && (
-				<p className={clsx("mt-1 text-sm", states[state])}>{helperText}</p>
+				<p className={clsx("mt-1 text-sm", validationStates[validationState])}>
+					{helperText}
+				</p>
 			)}
 		</div>
 	);

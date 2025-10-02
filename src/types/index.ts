@@ -6,6 +6,6 @@ export interface InputProps extends Omit<ComponentProps<"input">, "onChange"> {
 	onChange: (newValue: string) => void;
 	label?: string;
 	helperText?: string;
-	state?: "standard" | "error" | "success";
+	validationState?: "standard" | "error" | "success";
 	clearable?: boolean;
 }

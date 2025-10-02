@@ -16,6 +16,22 @@ const meta: Meta<typeof Input> = {
 			description: "Input types",
 			options: ["text", "number", "email", "password"],
 		},
+		name: { description: "Unique name for input" },
+		label: { description: "Label text displayed above the input field" },
+		helperText: {
+			description:
+				"Additional information about input value or validation state",
+		},
+		onChange: {
+			description: "Callback function called when input value changes",
+		},
+		validationState: {
+			description:
+				'Indicates input validation status (e.g., "standard", "error", "success")',
+		},
+		clearable: {
+			description: "Whether to show a clear button or not",
+		},
 	},
 };
 
@@ -45,7 +61,7 @@ export const TextClearable: Story = {
 		type: "text",
 		helperText: "Successful state of input",
 		clearable: true,
-		state: "success",
+		validationState: "success",
 	},
 };
 
@@ -66,6 +82,6 @@ export const Number: Story = {
 		label: "Number Input",
 		type: "number",
 		helperText: "Error state of input",
-		state: "error",
+		validationState: "error",
 	},
 };
