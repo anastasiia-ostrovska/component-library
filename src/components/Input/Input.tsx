@@ -38,7 +38,7 @@ export const Input = ({
 	const showClearButton = clearable && !!value && !isPassword;
 
 	return (
-		<div className=" flex flex-col">
+		<div className="flex flex-col">
 			{/*	Label for the input*/}
 			{label && (
 				<label htmlFor={name} className="mb-1 text-md font-medium">
@@ -53,7 +53,7 @@ export const Input = ({
 					onChange={(e) => onChange(e.target.value)}
 					className={clsx(
 						`
-						w-full rounded-md border px-3 py-2 
+						w-full rounded-md border px-3 py-2 pr-9
 						focus:outline-none focus:ring-2 focus:ring-primary 
 						[&::-webkit-inner-spin-button]:appearance-none 
 						[&::-webkit-outer-spin-button]:appearance-none`,
