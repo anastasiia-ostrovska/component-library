@@ -10,6 +10,13 @@ const meta: Meta<typeof Input> = {
 	parameters: {
 		layout: "centered",
 	},
+	argTypes: {
+		type: {
+			control: "select",
+			description: "Input types",
+			options: ["text", "number", "email", "password"],
+		},
+	},
 };
 
 export default meta;
