@@ -1,0 +1,4 @@
+export const ICON_SIZE = 20;
+
+export const FADE_TRANSITION_DURATION = 500;
+export const SLIDE_TRANSITION_DURATION = 1000;
