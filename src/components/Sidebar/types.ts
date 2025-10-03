@@ -6,3 +6,8 @@ export interface MenuItem {
 	path?: string;
 	children?: MenuItem[];
 }
+
+export interface SidebarProps {
+	items: MenuItem[];
+	header?: ReactNode;
+}

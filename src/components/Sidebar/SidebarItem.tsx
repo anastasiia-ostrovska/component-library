@@ -53,7 +53,7 @@ export const SidebarItem = ({
 			className={`flex flex-col py-3 px-6 rounded cursor-pointer hover:bg-background-hover`}
 		>
 			<Link href={path} className="flex flex-row items-center gap-2">
-				<div className="h-4 w-4">{!!icon && icon}</div>
+				<div className="h-4 w-4">{icon}</div>
 				{title}
 			</Link>
 		</li>
