@@ -51,7 +51,7 @@ export const Toast = ({
 				`
 		fixed right-8 bottom-8 flex flex-row items-center gap-4
 		max-w-3xs w-full sm:max-w-sm py-2 px-4 text-wrap break-all
-		bg-background border-2 rounded
+		bg-background border-2 rounded-md  
 		transition-all ease-in-out
 		`,
 				`duration-[${[transitionDuration[transition]]}]ms`,

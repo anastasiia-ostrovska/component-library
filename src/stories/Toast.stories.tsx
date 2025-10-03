@@ -40,7 +40,7 @@ const ControlledToast = (args: ToastProps) => {
 	return (
 		<div className="h-40 p-4">
 			<button
-				className="mb-4 rounded-lg bg-foreground text-background p-2 cursor-pointer"
+				className="mb-4 rounded-lg bg-foreground text-background p-2 cursor-pointer transition-transform duration-200 hover:scale-105"
 				onClick={() => setIsOpen(true)}
 			>
 				Open toast
@@ -64,7 +64,7 @@ export const Primary: Story = {
 export const Success: Story = {
 	render: (args) => <ControlledToast {...args} />,
 	args: {
-		message: "Success toast notifications! (3s)",
+		message: "Success toast notifications! (3s) ",
 		variant: "success",
 		duration: 3000,
 		transition: "fade",
@@ -74,7 +74,7 @@ export const Success: Story = {
 export const Warning: Story = {
 	render: (args) => <ControlledToast {...args} />,
 	args: {
-		message: "Warning toast notifications! (3s)",
+		message: "Warning toast notifications! (3s) ",
 		variant: "warning",
 		duration: 3000,
 		transition: "fade",
@@ -84,7 +84,7 @@ export const Warning: Story = {
 export const Error: Story = {
 	render: (args) => <ControlledToast {...args} />,
 	args: {
-		message: "Error toast notifications! (3s)",
+		message: "Error toast notifications! (3s) ",
 		variant: "error",
 		duration: 3000,
 		transition: "fade",
@@ -94,7 +94,7 @@ export const Error: Story = {
 export const Secondary: Story = {
 	render: (args) => <ControlledToast {...args} />,
 	args: {
-		message: "Secondary toast notifications! (3s)",
+		message: "Secondary toast notifications! (3s) ",
 		variant: "secondary",
 		duration: 3000,
 		transition: "fade",
