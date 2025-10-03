@@ -1,15 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import type { InputProps } from "@/types";
-import { ClearInputIconButton, ShowPasswordIconButton } from "./IconButtons";
+import { CloseIconButton } from "@/components/CloseIconButton";
+import { ShowPasswordIconButton } from "./ShowPasswordIconButton";
+import { inputIconStyles, validationStates } from "./styles";
+import { ICON_SIZE } from "./consts";
+import type { InputProps } from "./types";
 import clsx from "clsx";
-
-const validationStates = {
-	standard: "text-text-secondary",
-	error: "text-error",
-	success: "text-success",
-};
 
 export const Input = ({
 	name,
@@ -62,12 +59,20 @@ export const Input = ({
 					{...props}
 				/>
 				{/*	CLear button*/}
-				{showClearButton && <ClearInputIconButton onClick={handleClearInput} />}
+				{showClearButton && (
+					<CloseIconButton
+						iconSize={ICON_SIZE}
+						onClick={handleClearInput}
+						className={inputIconStyles}
+					/>
+				)}
 				{/* Password toggle */}
 				{isPassword && (
 					<ShowPasswordIconButton
+						iconSize={ICON_SIZE}
 						showPassword={showPassword}
 						onClick={handlePasswordToggle}
+						className={inputIconStyles}
 					/>
 				)}
 			</div>

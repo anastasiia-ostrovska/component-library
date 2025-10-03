@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import type { InputProps } from "@/types";
-import { Input } from "@/components/Input";
+import { Input, type InputProps } from "@/components/Input";
 
 const meta: Meta<typeof Input> = {
 	title: "UI/Input",
