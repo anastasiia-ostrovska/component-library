@@ -9,5 +9,6 @@ export interface MenuItem {
 
 export interface SidebarProps {
 	items: MenuItem[];
+	isOpen?: boolean;
 	header?: ReactNode;
 }

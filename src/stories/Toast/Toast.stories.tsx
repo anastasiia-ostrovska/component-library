@@ -6,6 +6,14 @@ const meta: Meta<typeof Toast> = {
 	title: "UI/Toast",
 	component: Toast,
 	tags: ["autodocs"],
+	parameters: {
+		docs: {
+			description: {
+				component:
+					"A toast notification component that appears at the bottom-right of the screen. Supports multiple variants (primary, secondary, success, error, warning), auto-dismiss after a specified duration, optional manual close button, and smooth fade or slide transitions.",
+			},
+		},
+	},
 	argTypes: {
 		message: {
 			description: "Text content displayed inside the toast notification",
@@ -38,7 +46,7 @@ const ControlledToast = (args: ToastProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div className="h-40 p-4">
+		<div className="min-h-100 overflow-hidden">
 			<button
 				className="mb-4 rounded-lg bg-foreground text-background p-2 cursor-pointer transition-transform duration-200 hover:scale-105"
 				onClick={() => setIsOpen(true)}

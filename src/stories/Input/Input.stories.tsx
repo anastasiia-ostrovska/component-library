@@ -8,6 +8,12 @@ const meta: Meta<typeof Input> = {
 	tags: ["autodocs"],
 	parameters: {
 		layout: "centered",
+		docs: {
+			description: {
+				component:
+					"An input component with optional label, helper text (Supports multiple variants: standard, success, error), and clearable functionality.",
+			},
+		},
 	},
 	argTypes: {
 		type: {
